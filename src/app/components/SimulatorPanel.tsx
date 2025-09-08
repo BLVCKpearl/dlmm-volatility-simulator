@@ -86,7 +86,7 @@ const DEFAULTS: DlmmConfig = {
   grid: { binStep_bps: 25, rangeBins: { left: -50, right: 50 }, activeId: 0 },
   liquidity: { shape: "Curve", curveSigma_bins: 16, inventory: { xTotal: 500, yTotal: 500 } },
   fees: { baseFactor_B: 1, baseFeePower: 0, variableControl_A: 1, maxFeeRate: 0.02, protocolFeePct: 0.05, feeOnFee: true },
-  runtime: { duration_sec: 21600, seed: 42, tradeArrival_lambda_per_sec: 6, tradeSize_lognorm: { mu_log: -1.0, sigma_log: 0.9 }, buyProbability: 0.53, forceBinDepletion: true, stream: true },
+  runtime: { duration_sec: 60*60, seed: 42, tradeArrival_lambda_per_sec: 100/60, tradeSize_lognorm: { mu_log: -1.0, sigma_log: 0.9 }, buyProbability: 0.5, forceBinDepletion: true, stream: true },
   advancedDefaults: { volFilter_t_f_sec: 1, volDecay_t_d_sec: 5, decayFactor_R: 0.5 }
 };
 
